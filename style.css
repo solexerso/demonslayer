@@ -1,4 +1,43 @@
+@font-face {
+  font-family: 'LemonMilk';
+  src: url('lemonmilk.ttf') format('ttf');
+}
+header {
+  user-select: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px;
+  background-color: #333;
+  border-radius: 0px;
+  text-align: center;
+  font-family: Arial, sans-serif; /* Используем стандартный шрифт Arial */
+  box-shadow: 0 0 100px #333;
+  z-index: 9999; /* Установите высокий z-index */
+}
+
+header.text {
+  color: #444; /* Цвет текста по умолчанию */
+  transition: color 0.3s; /* Плавное изменение цвета текста за 0.3 секунды */
+}
+
+header.text:hover {
+  color: white; /* Цвет текста при наведении */
+}
+header .text:hover {
+  color: white !important; /* Цвет текста при наведении */
+  transition: color 0.9s; /* Плавное изменение цвета текста за 0.3 секунды */
+}
+header .text:not(:hover) {
+  color: #444; /* Возвращение к исходному цвету при убирании курсора */
+  transition: color 1.5s;
+}
+.container {
+  margin-top: 200px; /* Выберите нужный размер отступа вниз, например, 100px */
+}
 body{
+  user-select: none;
     display:flex;
     margin:0;
     padding:0;
@@ -7,6 +46,7 @@ body{
     justify-content: center;
     align-items: center;
     font-family: arial;
+    margin-bottom: 100px; /* Выберите нужный размер отступа */
   }
   
   .container{
@@ -135,4 +175,29 @@ body{
     width: 100px;
     height: 100px;
     border-radius: 15px;
+    box-shadow: 0 0 10px black;
   }
+  .container {
+    margin-top: 200px; /* Выберите нужный размер отступа вниз, например, 100px */
+  }
+  .content {
+    margin-bottom: 0px; /* Установите нужный вам отступ между информацией и футером */
+  }
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #444; /* Цвет текста по умолчанию */
+    text-align: center;
+    padding: 5px 0; /* Добавьте отступы по вертикали и горизонтали для стилизации */
+    transition: color 0.3s; /* Плавное изменение цвета текста за 0.3 секунды */
+    z-index: 9999; /* Установите высокий z-index */
+    box-shadow: 0 0 10px #333;
+  }
+  
+  footer:hover {
+    color: white; /* Цвет текста при наведении */
+  }
+  
